@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Zay Shop{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="{% static 'myapp/img/apple-icon.png' %}">
+    <link rel="shortcut icon" href="{% static 'myapp/img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/templatemo.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/custom.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="{% static 'myapp/css/fontawesome.min.css' %}">
+</head>
+<body>
+
+    <!-- Start Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1" href="{% url 'home' %}">Zay</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <ul class="navbar-nav mx-lg-auto d-flex justify-content-between">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'shop' %}">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header -->
+
+    {% block content %}
+    <!-- Page-specific content will go here -->
+    {% endblock %}
+
+    <!-- Start Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Zay Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script src="{% static 'myapp/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'myapp/js/templatemo.js' %}"></script>
+    <script src="{% static 'myapp/js/custom.js' %}"></script>
+
+</body>
+</html>
